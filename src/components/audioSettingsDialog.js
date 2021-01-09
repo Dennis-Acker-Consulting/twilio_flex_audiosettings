@@ -50,7 +50,7 @@ class AudioSettingsDialog extends React.Component {
         Flex.Manager.getInstance().voiceClient.audio.setAudioConstraints(this.state.audioSettings);
         this.setState({
             audioSettings: Flex.Manager.getInstance().voiceClient.audio.audioConstraints
-        })
+        }, () => this.closeDialog())
     }
 
     handleChange = (e, c) => {
@@ -100,31 +100,40 @@ class AudioSettingsDialog extends React.Component {
             <Dialog open={this.props.isOpen ? true : false}>
                 <div style={{ minWidth: "500px", minHeight: "500px" }}>
                     <div style={{ padding: "30px" }}>
-                        <p> Audio Settings </p>
+                        <p style={{
+                            fontWeight: "900"
+                        }}> Audio Settings </p>
                         <div style={{ display: "inline-flex", lineHeight: "75px", width: "100%" }}><p style={{
-                            marginRight: "10px"
+                            marginRight: "10px",
+                            width: "50%"
                         }}>Samplerate: </p><Input onChange={(e) => this.handleChange(e, "sampleRate")} value={this.state.audioSettings ? this.state.audioSettings.sampleRate : 0} /><p style={{
-                            marginLeft: "10px"
+                                marginLeft: "10px"
                         }}> Hz</p></div>
                         <div style={{ display: "inline-flex", lineHeight: "75px", width: "100%" }}><p style={{
-                            marginRight: "10px"
+                            marginRight: "10px",
+                            width: "50%"
                         }}>Samplesize: </p><Input onChange={(e) => this.handleChange(e, "sampleSize")} value={this.state.audioSettings ? this.state.audioSettings.sampleSize : 0} /><p style={{
                             marginLeft: "10px"
                         }}> Bit</p></div>
                         <div style={{ display: "inline-flex", lineHeight: "75px", width: "100%" }}><p style={{
-                            marginRight: "10px"
+                            marginRight: "10px",
+                            width: "50%"
                         }}>Channels: </p><Input onChange={(e) => this.handleChange(e, "channelCount")} value={this.state.audioSettings ? this.state.audioSettings.channelCount : 0} /></div>
                         <div style={{ display: "inline-flex", lineHeight: "75px", width: "100%" }}><p style={{
-                            marginRight: "10px"
+                            marginRight: "10px",
+                            width: "50%"
                         }}>Volume: </p><Input onChange={(e) => this.handleChange(e, "volume")} value={this.state.audioSettings ? this.state.audioSettings.volume : 0} /></div>
                         <div style={{ display: "inline-flex", lineHeight: "75px", width: "100%" }}><p style={{
-                            marginRight: "10px"
+                            marginRight: "10px",
+                            width: "50%"
                         }}>EchoCancellation: </p><Checkbox onChange={(e) => this.handleChange(e, "echoCancellation")} checked={this.state.audioSettings ? this.state.audioSettings.echoCancellation : false} /></div >
                         <div style={{ display: "inline-flex", lineHeight: "75px", width: "100%" }}><p style={{
-                            marginRight: "10px"
+                            marginRight: "10px",
+                            width: "50%"
                         }}>AutoGainControl: </p><Checkbox onChange={(e) => this.handleChange(e, "autoGainControl")} checked={this.state.audioSettings ? this.state.audioSettings.autoGainControl : false} /></div >
                         <div style={{ display: "inline-flex", lineHeight: "75px", width: "100%" }}><p style={{
-                            marginRight: "10px"
+                            marginRight: "10px",
+                            width: "50%"
                         }}>NoiseSuppression: </p><Checkbox onChange={(e) => this.handleChange(e, "noiseSuppression")} checked={this.state.audioSettings ? this.state.audioSettings.noiseSuppression : false} /></div >
                         <Cancel />
                         <Button
