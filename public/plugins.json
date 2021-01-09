@@ -1,0 +1,13 @@
+[
+  {
+    "name": "AudioSettings",
+    "version": "1.0.0",
+    "class": "AudioSettings",
+    "requires": [
+      {
+        "@twilio/flex-ui": "^1"
+      }
+    ],
+    "src": "http://localhost:3000/plugin-audiosettings.js"
+  }
+]
