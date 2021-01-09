@@ -119,13 +119,13 @@ class AudioSettingsDialog extends React.Component {
                         }}>Volume: </p><Input onChange={(e) => this.handleChange(e, "volume")} value={this.state.audioSettings ? this.state.audioSettings.volume : 0} /></div>
                         <div style={{ display: "inline-flex", lineHeight: "75px", width: "100%" }}><p style={{
                             marginRight: "10px"
-                        }}>EchoCancellation: </p><Checkbox onChange={(e) => this.handleChange(e, "echoCancellation")} value={this.state.audioSettings ? this.state.audioSettings.echoCancellation : false} /></div >
+                        }}>EchoCancellation: </p><Checkbox onChange={(e) => this.handleChange(e, "echoCancellation")} checked={this.state.audioSettings ? this.state.audioSettings.echoCancellation : false} /></div >
                         <div style={{ display: "inline-flex", lineHeight: "75px", width: "100%" }}><p style={{
                             marginRight: "10px"
-                        }}>AutoGainControl: </p><Checkbox onChange={(e) => this.handleChange(e, "autoGainControl")} value={this.state.audioSettings ? this.state.audioSettings.autoGainControl : false} /></div >
+                        }}>AutoGainControl: </p><Checkbox onChange={(e) => this.handleChange(e, "autoGainControl")} checked={this.state.audioSettings ? this.state.audioSettings.autoGainControl : false} /></div >
                         <div style={{ display: "inline-flex", lineHeight: "75px", width: "100%" }}><p style={{
                             marginRight: "10px"
-                        }}>NoiseSuppression: </p><Checkbox onChange={(e) => this.handleChange(e, "noiseSuppression")} value={this.state.audioSettings ? this.state.audioSettings.noiseSuppression : false} /></div >
+                        }}>NoiseSuppression: </p><Checkbox onChange={(e) => this.handleChange(e, "noiseSuppression")} checked={this.state.audioSettings ? this.state.audioSettings.noiseSuppression : false} /></div >
                         <Cancel />
                         <Button
                             variant="contained"
