@@ -22,4 +22,3 @@ Twilio Default Original Settings:
             autoGainControl: true,
             noiseSuppression: true
             
-![](https://headless.ciab.io/Twilio-Flex.gif)
